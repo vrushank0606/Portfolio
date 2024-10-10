@@ -1,0 +1,281 @@
+/* CSS reset */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+}
+
+/* Typography =======================*/
+
+/* Main heading for card's front cover */
+.card-front__heading {
+  font-size: 2rem; /* Adjusted for better fit */
+  margin-top: 0.4rem;
+  white-space: normal; /* Allow wrapping */
+  text-align: center;
+}
+
+/* Main heading for inside page */
+.inside-page__heading {
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+/* Mixed */
+.inside-page__heading,
+.card-front__text-view {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: 0.4rem;
+}
+
+.inside-page__heading--city,
+.card-front__text-view--city {
+  color: #ff62b2;
+}
+
+.inside-page__heading--ski,
+.card-front__text-view--ski {
+  color: #2aaac1;
+}
+
+.inside-page__heading--beach,
+.card-front__text-view--beach {
+  color: #fa7f67;
+}
+
+.inside-page__heading--camping,
+.card-front__text-view--camping {
+  color: #00b97c;
+}
+
+/* Front cover */
+.card-front__tp {
+  color: #fafbfa;
+}
+
+.card-front__text-price {
+  font-size: 1.8rem; /* Adjusted for better fit */
+  margin-top: -0.3rem;
+}
+
+/* Back cover */
+.inside-page__text {
+  color: #333;
+}
+
+/* Icons ===========================================*/
+.card-front__image {
+  width: 100%;
+  height: 10rem; /* Increased height */
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Buttons =================================================*/
+.inside-page__btn {
+  background-color: transparent;
+  border: 6px solid;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 4rem;
+  overflow: hidden;
+  padding: 1rem 1.2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 85%;
+  z-index: 10;
+}
+
+.inside-page__btn::before {
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleY(0);
+  transition: all 0.3s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+.inside-page__btn--city {
+  border-color: #ff40a1;
+  color: #ff40a1;
+}
+
+.inside-page__btn--city::before {
+  background-color: #ff40a1;
+}
+
+.inside-page__btn--ski {
+  border-color: #279eb2;
+  color: #279eb2;
+}
+
+.inside-page__btn--ski::before {
+  background-color: #279eb2;
+}
+
+.inside-page__btn--beach {
+  border-color: #fa7f67;
+  color: #fa7f67;
+}
+
+.inside-page__btn--beach::before {
+  background-color: #fa7f67;
+}
+
+.inside-page__btn--camping {
+  border-color: #00b97d;
+  color: #00b97d;
+}
+
+.inside-page__btn--camping::before {
+  background-color: #00b97d;
+}
+
+.inside-page__btn:hover {
+  color: #fafbfa;
+}
+
+.inside-page__btn:hover::before {
+  transform: scaleY(1);
+}
+
+/* Layout Structure =======================================*/
+.main {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.card-area {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+/* Card ============================================*/
+.card-section {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: -0.2rem 3.4rem 13.2rem -6.4rem rgba(0, 0, 0, 0.5);
+  height: 25rem;
+  position: relative;
+  transition: all 1s ease;
+  width: 25rem;
+}
+
+/* Flip card */
+.flip-card {
+  height: 25rem;
+  perspective: 200rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  visibility: hidden;
+  width: 25rem;
+  z-index: 100;
+}
+
+.flip-card > * {
+  visibility: visible;
+}
+
+.flip-card__container {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card-front {
+  background-color: #a855f7;
+  height: 25rem;
+  width: 25rem;
+}
+
+.card-front__tp {
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+  display: flex;
+  flex-direction: column;
+  height: 22rem;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Inside page */
+.inside-page {
+  background-color: #fafbfa;
+  box-shadow: inset 40rem 0px 10rem -5rem rgba(0, 0, 0, 0.25);
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  width: 25rem;
+  z-index: 1;
+}
+
+.inside-page__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.card:hover {
+  width: 50rem;
+}
+
+.card:hover .flip-card__container {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .inside-page {
+  box-shadow: inset 2rem 0px 10rem -5rem rgba(0, 0, 0, 0.1);
+}
