@@ -47,7 +47,7 @@ const Home = () => {
 
           <p className="max-w-lg text-2xl">
             I specialize in crafting high-performance web applications using
-            React, Spring Boot, and AWS.
+            React, Angular, Spring Boot, and AWS.
           </p>
         </div>
 

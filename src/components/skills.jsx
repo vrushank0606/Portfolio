@@ -24,8 +24,9 @@ import {
   SiApachekafka,
 } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
-import { GrSlack } from "react-icons/gr";
 import { SiPostman } from "react-icons/si";
+import { SiSlack } from "react-icons/si";
+import { SiAngular } from "react-icons/si";
 
 const Skills = () => {
   return (
@@ -57,6 +58,10 @@ const Skills = () => {
         <div className="skills-card">
           <FaNodeJs size={40} />
           <p>Node.js</p>
+        </div>
+        <div className="skills-card">
+          <SiAngular size={40} />
+          <p>Angular</p>
         </div>
         <div className="skills-card">
           <FaReact size={40} />
@@ -140,7 +145,7 @@ const Skills = () => {
           <p>Postman</p>
         </div>
         <div className="skills-card">
-          <GrSlack size={40} />
+          <SiSlack size={40} />
           <p>Slack</p>
         </div>
       </div>

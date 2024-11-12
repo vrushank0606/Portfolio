@@ -112,7 +112,7 @@ const Contact = () => {
           {/* Email */}
           <div className="flex items-center space-x-2">
             <AiOutlineMail className="text-purple-500" size={24} />
-            <span className="text-lg">vrushankhiremath@gmail.com</span>
+            <span className="text-lg">hiremathvrushank3@gmail.com</span>
           </div>
 
           {/* Phone Number */}

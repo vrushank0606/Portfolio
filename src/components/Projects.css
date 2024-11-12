@@ -279,3 +279,94 @@ body {
 .card:hover .inside-page {
   box-shadow: inset 2rem 0px 10rem -5rem rgba(0, 0, 0, 0.1);
 }
+
+
+/* Pop-Up Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dim the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Higher than existing elements */
+}
+
+/* Pop-Up Content */
+.popup {
+  background-color: #ffffff; /* White background for the pop-up */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Pop-Up Title */
+.popup-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Pop-Up Image */
+.popup-image {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+/* Pop-Up Description */
+.popup-description {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Pop-Up Link */
+.popup-link {
+  display: inline-block;
+  background-color: #6c63ff; /* Match your theme color */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  transition: background-color 0.3s ease;
+}
+
+.popup-link:hover {
+  background-color: #534b9a;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
