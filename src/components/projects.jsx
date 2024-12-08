@@ -3,7 +3,7 @@ import "./Projects.css"; // Import the CSS file for styling
 import projectManagementImage from "../assets/project.png";
 import reactLibraryImage from "../assets/reactLib.png";
 import healthAppImage from "../assets/healthme.png";
-import messagingAppImage from "../assets/msgapp.png";
+import eduoceanAppImage from "../assets/msgapp.png";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null); // State to track the selected project
@@ -19,7 +19,7 @@ const Projects = () => {
         "An application designed to streamline task management, resource allocation, and project tracking for teams.",
       moreDetails:
         "This tool includes Gantt charts, Kanban boards, and resource planning features. It integrates with Jira and Slack for seamless collaboration.",
-      repoLink: "https://github.com/yourprofile/project-management-tool",
+      repoLink: "https://github.com/mananrg/Frontend_Kanban.git",
     },
     {
       id: 2,
@@ -33,23 +33,24 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "HealthyMe App",
+      title: "Health Harbor App",
       image: healthAppImage,
       description:
         "A web application to help users monitor and improve their daily health habits, such as diet, exercise, sleep, and hydration.",
       moreDetails:
         "The app includes calorie tracking, water intake reminders, and progress tracking charts to promote healthier lifestyles.",
-      repoLink: "https://github.com/yourprofile/healthyme",
+      repoLink: "https://github.com/vrushank0606/Health-Harbor.git",
     },
     {
       id: 4,
-      title: "Messaging App",
-      image: messagingAppImage,
+      title: "EduOcean Figma Design",
+      image: eduoceanAppImage,
       description:
-        "A messaging application that tracks email responses and provides real-time analytics for communication efficiency.",
+        "An educational platform inspired by Udemy, designed to offer a wide range of online courses for learners worldwide.",
       moreDetails:
-        "Features include read receipts, link tracking, and response time analytics. Perfect for email campaigns and team communication.",
-      repoLink: "https://github.com/yourprofile/messaging-app",
+        "This app features a responsive interface, course browsing, user reviews, and a seamless payment integration system. The project includes a Figma prototype highlighting the user experience and design elements.",
+      repoLink:
+        "https://www.figma.com/design/YXsHDZXOzgzKU8E6gNou5K/EduOcean?node-id=0-1&node-type=canvas&t=uvAfvI9NQNqGIuw0-0",
     },
   ];
 
